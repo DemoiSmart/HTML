@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exam Section</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <h1>Exam Section</h1>
+    <p>This is your exam content.</p>
+    
+    <script>
+        let isExamInProgress = true;
+
+        // Detect tab switch
+        document.addEventListener("visibilitychange", function () {
+            if (document.visibilityState === 'hidden' && isExamInProgress) {
+                // Warn the user
+                alert("Warning: You are not allowed to switch tabs during the exam!");
+            }
+        });
+
+        // Example: Simulate finishing the exam
+        setTimeout(function() {
+            isExamInProgress = false;
+            alert("Exam completed. You can now navigate away from the page.");
+        }, 30000);  // Set the duration of the exam (30 seconds in this example)
+    </script>
+</body>
+</html>
