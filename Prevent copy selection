@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prevent Copy</title>
+    <script>
+        // Disable right-click
+        document.addEventListener('contextmenu', function (e) {
+            e.preventDefault();
+        });
+
+        // Disable text selection
+        document.addEventListener('selectstart', function (e) {
+            e.preventDefault();
+        });
+    </script>
+    <style>
+        /* Optional: Add a custom style to indicate that copying is disabled */
+        body {
+            user-select: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>This is a sample content</h1>
+    <p>Right-click and text selection are disabled on this page.</p>
+</body>
+</html>
